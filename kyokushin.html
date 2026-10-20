@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Estilo Kyokushin e IFK - Colombia</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ifk: {
+                            darker: '#0a1128',
+                            dark: '#001f3f',
+                            blue: '#003366',
+                            card: '#111d42',
+                            cardborder: '#1e2d5a',
+                            light: '#0066cc',
+                            red: '#d90429',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-ifk-darker text-slate-100 antialiased">
+
+    <!-- NAVEGACIÓN -->
+    <header class="fixed w-full bg-ifk-darker/90 backdrop-blur-md shadow-lg z-50 transition-all border-b border-ifk-cardborder">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo Oficial -->
+            <a href="#inicio" class="flex items-center gap-3">
+                <img src="img/logo.png" alt="IFK Kyokushin Logo" class="h-10 w-auto">
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight text-white block leading-none">IFK COLOMBIA</span>
+                    <span class="text-xs text-blue-300 font-semibold tracking-widest uppercase">Kyokushin Karate</span>
+                </div>
+            </a>
+
+           <!-- Menú Desktop -->
+<nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-300">
+
+    <a href="ifk.html#inicio" class="hover:text-blue-400 transition-colors">Inicio</a>
+    <a href="#nosotros" class="hover:text-blue-400 transition-colors">Quiénes Somos</a>
+    <a href="#servicios" class="hover:text-blue-400 transition-colors">Servicios</a>
+    <!-- DOjos con submenú -->
+    <div class="relative group">
+        <!-- Botón principal -->
+        <a href="#Dojos"
+           class="hover:text-blue-400 transition-colors flex items-center gap-1">Dojos<svg class="w-4 h-4 transition-transform group-hover:rotate-180"
+                 fill="none"
+                 stroke="currentColor"
+                 viewBox="0 0 24 24">
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"/>
+            </svg>
+        </a>
+
+        <!-- Submenú -->
+        <div class="absolute left-0 top-full mt-3 w-48
+                    bg-slate-900 border border-slate-700
+                    rounded-xl shadow-xl
+                    opacity-0 invisible
+                    group-hover:opacity-100
+                    group-hover:visible
+                    transition-all duration-200
+                    z-50">
+
+            <a href="dojomusashi.html"class="block px-4 py-3 hover:bg-slate-800 hover:text-blue-400 rounded-t-xl transition-colors">Musashi</a>
+            <a href="#dojo-argentina"class="block px-4 py-3 hover:bg-slate-800 hover:text-blue-400 transition-colors">Otro #2</a>
+            <a href="#dojo-brasil" class="block px-4 py-3 hover:bg-slate-800 hover:text-blue-400 transition-colors"> Otro #3 </a>
+    
+        </div>
+    </div>
+    <a href="kyokushin.html" class="hover:text-blue-400 transition-colors">Kyokushin</a>
+   
+	 <a href="ifk.html#contacto" class="bg-ifk-red text-white px-5 py-2.5 rounded-full hover:bg-red-700 transition-all shadow-md hover:shadow-lg font-semibold">Contacto</a>
+
+</nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="pt-32 pb-20 md:pt-44 md:pb-24 bg-gradient-to-b from-ifk-dark via-ifk-darker to-ifk-darker border-b border-ifk-cardborder">
+        <div class="max-w-7xl mx-auto px-6 text-center space-y-6">
+            <div class="inline-flex items-center gap-2 bg-blue-950/80 text-blue-300 border border-blue-800/50 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide uppercase">
+                <span class="w-2 h-2 rounded-full bg-ifk-red"></span> Filosofía y Estructura Marcial
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                El Camino del <span class="text-blue-400">Kyokushin</span> y la IFK
+            </h1>
+            <p class="text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
+                Conoce la historia detrás del estilo de la máxima verdad, los principios de la organización internacional y la jerarquía de grados que forja nuestro carácter.
+            </p>
+        </div>
+    </section>
+
+    <!-- HISTORIA Y LA IFK -->
+    <section class="py-24 bg-ifk-darker">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6">
+                <h2 class="text-sm font-bold tracking-widest text-blue-400 uppercase">Orígenes y Legado</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-white">¿Qué es el Karate Kyokushin?</h3>
+                <p class="text-slate-300 leading-relaxed">
+                    Fundado por el legendario <strong class="text-white">Sosai Masutatsu Oyama</strong> (10.° Dan), el Kyokushin se traduce literalmente como la <em>"Sociedad de la Última Verdad"</em>. Es un estilo de karate de contacto completo (full-contact) que enfatiza el acondicionamiento físico riguroso, la efectividad en el combate real y la fortaleza mental por encima de la mera estética superficial.
+                </p>
+                <p class="text-slate-300 leading-relaxed">
+                    Para mantener vivo este legado a nivel global y asegurar una estricta rectitud técnica, se fundó en 1992 la <strong class="text-white">International Karate Federation (IFK)</strong> bajo el liderazgo de Hanshi Steve Arneil. La IFK promueve un karate moderno, dinámico, fraterno y firmemente anclado en los valores tradicionales del Budo.
+                </p>
+            </div>
+            <div class="bg-ifk-card p-8 md:p-10 rounded-3xl border border-ifk-cardborder space-y-6">
+                <h4 class="text-xl font-bold text-white border-b border-ifk-cardborder pb-4">Pilares de la IFK</h4>
+                <ul class="space-y-4 text-sm text-slate-300">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-check text-blue-400 mt-1"></i>
+                        <span><strong>Independencia y Unidad:</strong> Dojos unidos bajo una fraternidad global sin perder su identidad local.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-check text-blue-400 mt-1"></i>
+                        <span><strong>Alto Nivel Técnico:</strong> Programas de examen estandarizados internacionalmente para cada categoría de edad y grado.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-check text-blue-400 mt-1"></i>
+                        <span><strong>Compromiso Ético:</strong> Fomento del respeto mutuo, la humildad y la superación personal constante (Osu).</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SISTEMA DE CINTURONES -->
+    <section class="py-24 bg-ifk-dark border-y border-ifk-cardborder">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <h2 class="text-sm font-bold tracking-widest text-blue-400 uppercase">Jerarquía de Grados</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-white">Cinturones en el Karate Kyokushin</h3>
+                <p class="text-slate-300">El sistema de progresión en Kyokushin se divide en Kyu (grados principiantes e intermedios) y Dan (grados avanzados o cinturones negros).</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-ifk-card p-6 rounded-2xl border border-ifk-cardborder space-y-2">
+                    <div class="w-full h-4 bg-white rounded-full border border-slate-600 mb-4"></div>
+                    <h4 class="font-bold text-white text-lg">Blanco (10.° Kyu)</h4>
+                    <p class="text-xs text-slate-300">Simboliza el inicio, la pureza y el potencial en blanco listo para recibir conocimiento.</p>
+                </div>
+                <div class="bg-ifk-card p-6 rounded-2xl border border-ifk-cardborder space-y-2">
+                    <div class="w-full h-4 bg-orange-500 rounded-full mb-4"></div>
+                    <h4 class="font-bold text-white text-lg">Naranja (9.° y 8.° Kyu)</h4>
+                    <p class="text-xs text-slate-300">Representa el calor del sol naciente, el amanecer del entendimiento físico y mental.</p>
+                </div>
+                <div class="bg-ifk-card p-6 rounded-2xl border border-ifk-cardborder space-y-2">
+                    <div class="w-full h-4 bg-blue-600 rounded-full mb-4"></div>
+                    <h4 class="font-bold text-white text-lg">Azul (7.° y 6.° Kyu)</h4>
+                    <p class="text-xs text-slate-300">Simboliza el cielo y la vastitud, reflejando el ensanchamiento de la perspectiva del estudiante.</p>
+                </div>
+                <div class="bg-ifk-card p-6 rounded-2xl border border-ifk-cardborder space-y-2">
+                    <div class="w-full h-4 bg-yellow-400 rounded-full mb-4"></div>
+                    <h4 class="font-bold text-white text-lg">Amarillo (5.° y 4.° Kyu)</h4>
+                    <p class="text-xs text-slate-300">Equivale a la luz solar y la estabilidad, marcando un avance firme en las bases técnicas.</p>
+                </div>
+                <div class="bg-ifk-card p-6 rounded-2xl border border-ifk-cardborder space-y-2">
+                    <div class="w-full h-4 bg-green-600 rounded-full mb-4"></div>
+                    <h4 class="font-bold text-white text-lg">Verde (3.° y 2.° Kyu)</h4>
+                    <p class="text-xs text-slate-300">Representa la planta que brota y comienza a florecer, adquiriendo madurez técnica.</p>
+                </div>
+                <div class="bg-ifk-card p-6 rounded-2xl border border-ifk-cardborder space-y-2">
+                    <div class="w-full h-4 bg-amber-800 rounded-full mb-4"></div>
+                    <h4 class="font-bold text-white text-lg">Café / Marrón (1.° Kyu)</h4>
+                    <p class="text-xs text-slate-300">Indica madurez, practicidad y la preparación profunda previa al cinturón negro.</p>
+                </div>
+                <div class="bg-ifk-card p-6 rounded-2xl border border-ifk-cardborder sm:col-span-2 lg:col-span-3 space-y-2">
+                    <div class="w-full h-4 bg-slate-900 rounded-full border border-slate-700 mb-4"></div>
+                    <h4 class="font-bold text-white text-lg">Negro (Grados Dan 1.° a 10.°)</h4>
+                    <p class="text-xs text-slate-300">Simboliza la oscuridad más allá del sol, indicando que el aprendizaje nunca termina y que el practicante vuelve a empezar un nuevo ciclo de sabiduría.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APARTADO SENSEI OSCAR SANABRIA -->
+    <section class="py-24 bg-ifk-darker">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-ifk-card border border-ifk-cardborder p-8 md:p-12 rounded-3xl grid md:grid-cols-3 gap-8 items-center">
+                <div class="text-center md:text-left space-y-4">
+                    <div class="w-32 h-32 mx-auto md:mx-0 rounded-2xl bg-blue-950 border border-blue-800/50 flex items-center justify-center text-blue-400 text-5xl font-extrabold shadow-inner">
+                        <i class="fa-solid fa-user-ninja"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-extrabold text-white">Sensei Oscar Sanabria</h4>
+                        <span class="text-xs text-blue-400 font-semibold tracking-wider uppercase">Instructor Principal / Director</span>
+                    </div>
+                </div>
+                <div class="md:col-span-2 space-y-4 text-slate-300 text-sm leading-relaxed">
+                    <h2 class="text-sm font-bold tracking-widest text-blue-400 uppercase">Liderazgo y Trayectoria</h2>
+                    <h3 class="text-2xl font-bold text-white">Compromiso con la Excelencia Marcial</h3>
+                    <p>
+                        El Sensei Oscar Sanabria lidera la formación técnica y espiritual de los practicantes bajo los lineamientos oficiales de la IFK en Colombia. Con una trayectoria consagrada al estudio y enseñanza del Karate Kyokushin, ha guiado a decenas de estudiantes y competidores hacia la superación personal, inculcando los pilares de disciplina, respeto y firmeza característicos del dojo.
+                    </p>
+                    <p>
+                        Su enfoque pedagógico combina la exigencia del combate de contacto completo con el desarrollo humano integral, asegurando que cada alumno encuentre en el tatami una herramienta sólida para afrontar los retos de la vida diaria.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-ifk-darker text-white py-12 border-t border-ifk-cardborder">
+        <div class="max-w-7xl mx-auto px-6 text-center md:flex md:justify-between md:items-center space-y-4 md:space-y-0 text-sm text-slate-400">
+            <div class="flex items-center justify-center md:justify-start gap-3">
+                <img src="img/logo.png" alt="IFK Kyokushin Logo" class="h-8 w-auto">
+                <span>© 2026 IFK Karate Kyokushin Colombia - Bogotá.</span>
+            </div>
+            <div class="flex justify-center gap-6 text-lg text-white">
+                <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

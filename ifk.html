@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFK Karate Kyokushin - Colombia</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ifk: {
+                            darker: '#0a1128',
+                            dark: '#001f3f',
+                            blue: '#003366',
+                            card: '#111d42',
+                            cardborder: '#1e2d5a',
+                            light: '#0066cc',
+                            red: '#d90429',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+	    <style>
+
+        /* Estilo para el video */
+        video {
+            position: absolute;
+            top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+            width: 90%;
+            height: 70%;
+            object-fit: cover; /* Asegura que el video cubra toda la zona */
+            z-index: ; /* Coloca el video detrás del contenido */
+        }
+
+        /* Estilo para el contenido dentro del encabezado */
+        .contenido-header {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-size: 2em;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="bg-ifk-darker text-slate-100 antialiased">
+
+    <!-- NAVEGACIÓN -->
+    <header class="fixed w-full bg-ifk-darker/90 backdrop-blur-md shadow-lg z-50 transition-all border-b border-ifk-cardborder">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo Oficial -->
+            <a href="#inicio" class="flex items-center gap-3">
+                <img src="img/logo.png" alt="IFK Kyokushin Logo" class="h-10 w-auto">
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight text-white block leading-none">IFK COLOMBIA</span>
+                    <span class="text-xs text-blue-300 font-semibold tracking-widest uppercase">Kyokushin Karate</span>
+                </div>
+            </a>
+
+           <!-- Menú Desktop -->
+<nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-300">
+
+    <a href="ifk.html#inicio" class="hover:text-blue-400 transition-colors">Inicio</a>
+    <a href="#nosotros" class="hover:text-blue-400 transition-colors">Quiénes Somos</a>
+    <a href="#servicios" class="hover:text-blue-400 transition-colors">Servicios</a>
+    <!-- DOjos con submenú -->
+    <div class="relative group">
+        <!-- Botón principal -->
+        <a href="#Dojos"
+           class="hover:text-blue-400 transition-colors flex items-center gap-1">Dojos<svg class="w-4 h-4 transition-transform group-hover:rotate-180"
+                 fill="none"
+                 stroke="currentColor"
+                 viewBox="0 0 24 24">
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"/>
+            </svg>
+        </a>
+
+        <!-- Submenú -->
+        <div class="absolute left-0 top-full mt-3 w-48
+                    bg-slate-900 border border-slate-700
+                    rounded-xl shadow-xl
+                    opacity-0 invisible
+                    group-hover:opacity-100
+                    group-hover:visible
+                    transition-all duration-200
+                    z-50">
+
+            <a href="dojomusashi.html"class="block px-4 py-3 hover:bg-slate-800 hover:text-blue-400 rounded-t-xl transition-colors">Musashi</a>
+            <a href="#dojo-argentina"class="block px-4 py-3 hover:bg-slate-800 hover:text-blue-400 transition-colors">Otro #2</a>
+            <a href="#dojo-brasil" class="block px-4 py-3 hover:bg-slate-800 hover:text-blue-400 transition-colors"> Otro #3 </a>
+    
+        </div>
+    </div>
+    <a href="kyokushin.html" class="hover:text-blue-400 transition-colors">Kyokushin</a>
+
+   
+	 <a href="ifk.html#contacto" class="bg-ifk-red text-white px-5 py-2.5 rounded-full hover:bg-red-700 transition-all shadow-md hover:shadow-lg font-semibold">Contacto</a>
+
+</nav>
+        </div>
+    </header>
+
+    <!-- INICIO (HERO SECTION) -->
+    <section id="inicio" class="pt-32 pb-20 md:pt-44 md:pb-32 bg-gradient-to-b from-ifk-dark via-ifk-darker to-ifk-darker">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+         
+			<div class="space-y-6 text-center md:text-left">
+                <video autoplay loop muted>
+                            <source src="./video/video.mp4" type="video/mp4">
+                            Tu navegador no soporta el video.
+                        </video>
+				<div class="inline-flex items-center gap-2 bg-blue-950/80 text-blue-300 border border-blue-800/50 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide uppercase relative z-10">
+                    <span class="w-2 h-2 rounded-full bg-ifk-red"></span> Sede Central Bogotá, Colombia
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight relative z-10">
+                    Fuerza, Disciplina y <span class="text-blue-400">Carácter Verdadero</span>
+                </h1>
+                <p class="text-lg text-slate-300 leading-relaxed max-w-xl relative z-10">
+                    Bienvenido a la International Karate Federation (IFK) Colombia. Formamos practicantes bajo la tradición técnica del Karate Kyokushin, promoviendo la excelencia física, mental y espiritual.
+                </p>
+                <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start relative z-10">
+                    <a href="#contacto" class="bg-ifk-red hover:bg-red-700 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl text-center flex items-center justify-center gap-2">
+                        <span>Iniciar Entrenamiento</span>
+                        <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                    <a href="#servicios" class="bg-ifk-card border border-ifk-cardborder hover:border-blue-400 text-slate-200 hover:text-white px-8 py-4 rounded-xl font-semibold transition-all text-center">
+                        Explorar Programas
+                    </a>
+                </div>
+            </div>
+
+            <!-- Visual con el Logo Oficial de la IFK Kyokushin -->
+            <div class="relative flex justify-center">
+                <div class="w-full max-w-md bg-ifk-card border border-ifk-cardborder rounded-3xl shadow-2xl overflow-hidden relative flex flex-col items-center justify-center p-8 text-center space-y-6">
+                    <div class="absolute inset-0 opacity-5 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                    <img src="masoyama.jpg" alt="IFK Kyokushin Emblem" class="w-80 h-90 drop-shadow-lg relative z-10">
+                    <div class="space-y-2 relative z-10">
+                        <blockquote class="text-lg font-light italic text-slate-200">
+                            "El camino del Budo comienza y termina con respeto."
+                        </blockquote>
+                        <p class="text-xs uppercase tracking-widest font-semibold text-blue-400">— Sosai Masutatsu Oyama</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUIÉNES SOMOS / HISTORIA -->
+    <section id="nosotros" class="py-24 bg-ifk-dark border-y border-ifk-cardborder">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-sm font-bold tracking-widest text-blue-400 uppercase">Nuestra Identidad</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-white">
+                        Historia y Legado de la IFK Kyokushin
+                    </h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        La <strong class="text-white">International Karate Federation (IFK)</strong> fue fundada en 1992 por Hanshi Steve Arneil para preservar la pureza, el dinamismo y los estándares internacionales del Karate Kyokushin.
+                    </p>
+                    <p class="text-slate-300 leading-relaxed">
+                        En Bogotá, Colombia, representamos el pilar de desarrollo técnico y filosófico para dojos y practicantes del país. Nuestra misión es difundir un arte marcial ético, riguroso y accesible para todas las edades, respaldado por certificaciones internacionales oficiales.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 pt-4 border-t border-ifk-cardborder">
+                        <div>
+                            <span class="block text-3xl font-extrabold text-blue-400">+30</span>
+                            <span class="text-sm text-slate-400 font-medium">Años de trayectoria mundial</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-extrabold text-blue-400">100%</span>
+                            <span class="text-sm text-slate-400 font-medium">Aval Internacional IFK</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-ifk-card p-8 md:p-12 rounded-3xl border border-ifk-cardborder space-y-6">
+                    <h4 class="text-xl font-bold text-white border-b border-ifk-cardborder pb-4">Nuestros Principios Fundamentales</h4>
+                    <ul class="space-y-4">
+                        <li class="flex gap-4 items-start">
+                            <i class="fa-solid fa-circle-check text-blue-400 mt-1"></i>
+                            <div>
+                                <strong class="text-white block">Estandarización Técnica:</strong>
+                                <span class="text-sm text-slate-300">Syllabus unificado a nivel mundial para exámenes de grado y juzgamiento.</span>
+                            </div>
+                        </li>
+                        <li class="flex gap-4 items-start">
+                            <i class="fa-solid fa-circle-check text-blue-400 mt-1"></i>
+                            <div>
+                                <strong class="text-white block">Carácter e Inclusión:</strong>
+                                <span class="text-sm text-slate-300">Formación del individuo a través de la disciplina, la cortesía y la perseverancia.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS O PRODUCTOS -->
+    <section id="servicios" class="py-24 bg-ifk-darker">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <h2 class="text-sm font-bold tracking-widest text-blue-400 uppercase">Nuestra Oferta</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-white">Servicios Institucionales y Formación</h3>
+                <p class="text-slate-400">Ofrecemos programas estructurados tanto para practicantes individuales como para dojos interesados en afiliarse.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="bg-ifk-card p-8 rounded-2xl border border-ifk-cardborder hover:border-blue-500/50 transition-all space-y-4 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-blue-950 text-blue-400 border border-blue-800/50 flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-user-ninja"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white">Entrenamiento Regular</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Clases divididas por niveles y edades (Infantil, Juvenil y Adultos). Formación completa en Kihon, Kata y Kumite (combate de contacto).
+                        </p>
+                    </div>
+                    <a href="#contacto" class="text-blue-400 text-sm font-semibold hover:underline inline-flex items-center gap-1">Más información <i class="fa-solid fa-chevron-right text-xs"></i></a>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="bg-ifk-card p-8 rounded-2xl border border-ifk-cardborder hover:border-blue-500/50 transition-all space-y-4 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-blue-950 text-blue-400 border border-blue-800/50 flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-id-card"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white">Afiliación de Dojos</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Certificación y aval internacional para escuelas de karate en Colombia que deseen integrarse a la estructura oficial de la IFK.
+                        </p>
+                    </div>
+                    <a href="#contacto" class="text-blue-400 text-sm font-semibold hover:underline inline-flex items-center gap-1">Más información <i class="fa-solid fa-chevron-right text-xs"></i></a>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="bg-ifk-card p-8 rounded-2xl border border-ifk-cardborder hover:border-blue-500/50 transition-all space-y-4 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-blue-950 text-blue-400 border border-blue-800/50 flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white">Seminarios y Torneos</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Organización de campamentos de entrenamiento (Gashuku), seminarios técnicos con instructores internacionales y campeonatos nacionales.
+                        </p>
+                    </div>
+                    <a href="#contacto" class="text-blue-400 text-sm font-semibold hover:underline inline-flex items-center gap-1">Más información <i class="fa-solid fa-chevron-right text-xs"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VENTAJAS DEL KYOKUSHIN -->
+    <section id="ventajas" class="py-24 bg-ifk-dark relative overflow-hidden border-y border-ifk-cardborder">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <h2 class="text-sm font-bold tracking-widest text-blue-400 uppercase">¿Por qué Kyokushin?</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-white">Ventajas de Nuestra Práctica</h3>
+                <p class="text-slate-300">Conocido como el "Karate de la más alta verdad", el estilo Kyokushin transforma cuerpo y mente a través del esfuerzo constante.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-ifk-card p-6 rounded-2xl border border-ifk-cardborder space-y-3">
+                    <i class="fa-solid fa-heart-pulse text-2xl text-blue-400"></i>
+                    <h4 class="font-bold text-lg text-white">Acondicionamiento Superior</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">Desarrolla resistencia cardiovascular, fuerza muscular, flexibilidad y coordinación ágil.</p>
+                </div>
+                <div class="bg-ifk-card p-6 rounded-2xl border border-ifk-cardborder space-y-3">
+                    <i class="fa-solid fa-brain text-2xl text-blue-400"></i>
+                    <h4 class="font-bold text-lg text-white">Fortaleza Mental</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">Enseña a superar límites percibidos, cultivando resiliencia, autocontrol y enfoque bajo presión.</p>
+                </div>
+                <div class="bg-ifk-card p-6 rounded-2xl border border-ifk-cardborder space-y-3">
+                    <i class="fa-solid fa-shield-halved text-2xl text-blue-400"></i>
+                    <h4 class="font-bold text-lg text-white">Defensa Personal Real</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">Técnicas eficaces de contacto completo que otorgan confianza y seguridad en situaciones reales.</p>
+                </div>
+                <div class="bg-ifk-card p-6 rounded-2xl border border-ifk-cardborder space-y-3">
+                    <i class="fa-solid fa-handshake text-2xl text-blue-400"></i>
+                    <h4 class="font-bold text-lg text-white">Valores y Respeto</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">Inculca humility, cortesía y lazos de hermandad perdurables dentro de la comunidad marcial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" class="py-24 bg-ifk-darker">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <h2 class="text-sm font-bold tracking-widest text-blue-400 uppercase">Comunidad</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-white">Lo que dicen nuestros miembros</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="p-8 rounded-2xl bg-ifk-card border border-ifk-cardborder space-y-4">
+                    <div class="flex text-amber-400 text-sm gap-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 italic text-sm leading-relaxed">
+                        "Entrenar en la IFK Bogotá cambió completamente mi disciplina personal. El nivel de los instructores y la exigencia técnica son de estándares internacionales."
+                    </p>
+                    <div>
+                        <strong class="block text-white text-sm">Carlos Mendoza</strong>
+                        <span class="text-xs text-slate-400">Cinturón Verde / Practicante adulto</span>
+                    </div>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-ifk-card border border-ifk-cardborder space-y-4">
+                    <div class="flex text-amber-400 text-sm gap-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 italic text-sm leading-relaxed">
+                        "La afiliación de nuestro dojo a la IFK Colombia nos ha abierto puertas a campeonatos y seminarios de altísimo nivel. El respaldo institucional es impecable."
+                    </p>
+                    <div>
+                        <strong class="block text-white text-sm">Sensei Andrea Restrepo</strong>
+                        <span class="text-xs text-slate-400">Directora de Dojo Afiliado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-24 bg-ifk-dark border-t border-ifk-cardborder">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Información de Ubicación -->
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <h2 class="text-sm font-bold tracking-widest text-blue-400 uppercase">Ubicación y Contacto</h2>
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-white">Visítanos o Escríbenos</h3>
+                        <p class="text-slate-300">Estamos listos para resolver tus dudas sobre clases, inscripciones o afiliaciones regionales.</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-blue-950 border border-blue-800/50 text-blue-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Sede Principal Bogotá</h4>
+                                <p class="text-slate-400 text-sm">Bogotá D.C., Colombia</p>
+								<p class="text-slate-400 text-sm">Carrera 77a 64c-32 Piso 4, Villaluz</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-blue-950 border border-blue-800/50 text-blue-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Correo Electrónico</h4>
+                                <p class="text-slate-400 text-sm">contacto@ifkcolombia.org</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-blue-950 border border-blue-800/50 text-blue-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Teléfono / WhatsApp</h4>
+                                <p class="text-slate-400 text-sm">+57 312 3751537</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Contacto -->
+                <div class="bg-ifk-card p-8 md:p-10 rounded-3xl border border-ifk-cardborder shadow-xl">
+                    <form class="space-y-5" onsubmit="event.preventDefault(); alert('Mensaje enviado con éxito.');">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-200 mb-1">Nombre Completo</label>
+                            <input type="text" required placeholder="Tu nombre" class="w-full px-4 py-3 rounded-xl bg-ifk-darker border border-ifk-cardborder focus:border-blue-400 focus:ring-1 focus:ring-blue-400 outline-none transition-all text-sm text-white placeholder-slate-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-200 mb-1">Correo Electrónico</label>
+                            <input type="email" required placeholder="correo@ejemplo.com" class="w-full px-4 py-3 rounded-xl bg-ifk-darker border border-ifk-cardborder focus:border-blue-400 focus:ring-1 focus:ring-blue-400 outline-none transition-all text-sm text-white placeholder-slate-500">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-200 mb-1">Asunto de interés</label>
+                            <select class="w-full px-4 py-3 rounded-xl bg-ifk-darker border border-ifk-cardborder focus:border-blue-400 focus:ring-1 focus:ring-blue-400 outline-none transition-all text-sm text-slate-300">
+                                <option>Información de Clases en Bogotá</option>
+                                <option>Afiliación de Dojo / Escuela</option>
+                                <option>Seminarios y Eventos</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-200 mb-1">Mensaje</label>
+                            <textarea rows="4" required placeholder="¿En qué podemos ayudarte?" class="w-full px-4 py-3 rounded-xl bg-ifk-darker border border-ifk-cardborder focus:border-blue-400 focus:ring-1 focus:ring-blue-400 outline-none transition-all text-sm text-white placeholder-slate-500"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-ifk-red hover:bg-red-700 text-white py-4 rounded-xl font-semibold transition-all shadow-md hover:shadow-lg">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-ifk-darker text-white py-12 border-t border-ifk-cardborder">
+        <div class="max-w-7xl mx-auto px-6 text-center md:flex md:justify-between md:items-center space-y-4 md:space-y-0 text-sm text-slate-400">
+            <div class="flex items-center justify-center md:justify-start gap-3">
+                <img src="img/logo.png" alt="IFK Kyokushin Logo" class="h-8 w-auto">
+                <span>© 2026 IFK Karate Kyokushin Colombia - Bogotá.</span>
+            </div>
+            <div class="flex justify-center gap-6 text-lg text-white">
+                <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
